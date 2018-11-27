@@ -6,8 +6,6 @@ import React from 'react';
 
 const backgroundImage = () => (
     <div >
-
-
         <p>blah</p>
     </div>
 );
