@@ -3,7 +3,7 @@ import style from './Audio.module.css';
 
 const audio = () => (
     <div >
-        <p className={style.font}>Audio</p>
+        <p className={style.audio}>Audio</p>
     </div>
 
 );

@@ -3,9 +3,17 @@
     text-align: center;
     display: inline-block;
     font-family: 'Permanent Marker', cursive;
-    font-size: 3rem;
+    font-size: 2.4rem;
+    text-decoration: none;
 }
 
+/* Inline block for li items*/
 li {
     display: inline-block;
+
+}
+
+/* Take away underline for a tags*/
+a {
+    text-decoration: none;
 }

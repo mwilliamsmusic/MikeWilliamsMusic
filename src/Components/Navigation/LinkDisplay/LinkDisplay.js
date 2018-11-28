@@ -1,20 +1,45 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import style from './LinkDisplay.module.css';
 
 import Audio from '../Audio/Audio';
+import AudioContent from '../Audio/AudioContent';
+
 import Visual from '../Visual/Visual';
-import Words from '../Words/Words'
+import VisualContent from '../Visual/VisualContent/VisualContent';
+
+import Words from '../Words/Words';
+import WordsContent from '../Words/WordsContent/WordsContent';
+
 import Info from '../Info/Info';
+import InfoContent from '../Info/InfoContent/InfoContent';
+
 
 const linkDisplay = () => (
-    <div className={style.linkContain}>
-    <div className={style.links} >
-        <li> <Audio/> </li>
-        <li> <Visual/> </li>
-            <li><Words/></li>
-        <li> <Info/></li>
-        </div>
-    </div>
-);
 
+    <Router>
+    <div>
+    <div className={style.links} >
+        <li>
+            <Link to= "/audio"> <Audio/> </Link>
+        </li>
+        <li>
+            <Link to= "/visual"> <Visual/> </Link>
+        </li>
+        <li>
+            <Link to= "/words"> <Words/> </Link>
+        </li>
+        <li>
+            <Link to= "/info"> <Info/> </Link>
+        </li>
+
+
+    </div>
+        <Route path="/audio" component={AudioContent} />
+        <Route path="/visual" component={VisualContent} />
+        <Route path="/words" component={WordsContent} />
+        <Route path="/info" component={InfoContent} />
+    </div>
+    </Router>
+)
 export default linkDisplay;
