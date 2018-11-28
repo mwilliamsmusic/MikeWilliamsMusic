@@ -5,32 +5,81 @@ html {
       background-attachment: fixed;
       height: 100%;
       min-height: 100%;
-      background-color:black;
+      background-color: #080820;
   }
-
-
-.logoLarge {
-    margin-top: 10px;
-    background-image: url("../IMG/MWLOGO.png");
-    background-size: contain;
-    background-position: center;
-    height: 100px;
-    background-repeat: no-repeat;
-    grid-area: largeLogo;
+.gridContainer {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: ". smallLogo smallLogo smallLogo";
 }
 
+/* Small logo attributes*/
+.logoSmallContainer {
+    grid-area: smallLogo;
+    margin-right: 10px;
+    outline: none; }
+
+.logoSmall {
+    margin-top: 10px;
+    margin-left: 7px;
+    background-position-x: 70%;
+    width: 200px;
+    height: 50px;
+    background-image: url("../IMG/MWLOGO.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    outline: none;
+}
+
+
+/* Large logo attributes*/
+.logoSmallContainer {
+    grid-area: smallLogo;
+    margin-right: 10px;
+    outline: none;
+}
+
+/*Hide large logo on smaller screens*/
+.largeLogoContainer {
+    grid-area: largeLogo;
+    background-size: contain;
+    display: none; }
+
+/* Hide links smaller screens*/
 .linkContainer {
-    text-align: center;
-    display: inline-block;
-    height: 100px;
-    grid-area: links;
+    display: none;
 }
 
 /* Start Query*/
+@media screen and (min-width: 45rem) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+        grid-template-areas: ". largeLogo largeLogo ." ". links links .";
+    }
+    .linkContainer {
+        text-align: center;
+        display: inline-block;
+        height: 100px;
+        grid-area: links;
+    }
 
-.gridContainer {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas: ". largeLogo largeLogo ."
-    ". links links ."; }
+    .largeLogoContainer {
+        height: 120px;
+        display: block;
+    }
+    .logoLarge {
+        margin-top: 10px;
+        background-image: url("../IMG/MWLOGO.png");
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        background-repeat: no-repeat;
+        grid-area: largeLogo;
+    }
+}

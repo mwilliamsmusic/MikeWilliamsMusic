@@ -10,10 +10,11 @@
 /* Inline block for li items*/
 li {
     display: inline-block;
-
+ outline: none;
 }
 
 /* Take away underline for a tags*/
 a {
     text-decoration: none;
+
 }
