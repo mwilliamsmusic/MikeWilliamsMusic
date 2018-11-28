@@ -3,6 +3,7 @@ import style from './Layout.module.css';
 import LinkDisplay from '../Components/Navigation/LinkDisplay/LinkDisplay';
 
 const layout = () => (
+
  <div>
      {/* Background image properties*/}
     <div className={style.background}></div>
@@ -21,10 +22,11 @@ const layout = () => (
         </div>
 
         {/* Display Links */}
-  <div className={style.linkContainer}>
+     <div className={style.linkContainer}>
       <LinkDisplay/>
-  </div>
+    </div>
 
+        {/*End grid container*/}
     </div>
  </div>
 );

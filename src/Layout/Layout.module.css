@@ -1,3 +1,4 @@
+/* Display background and attributes*/
 html {
       background: url(../IMG/InReviewBACKGROUNDlow.jpg);
       background-repeat: no-repeat;
@@ -7,19 +8,21 @@ html {
       min-height: 100%;
       background-color: #080820;
   }
+
+/* Grid container smaller screen*/
 .gridContainer {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: auto;
-    grid-template-areas: ". smallLogo smallLogo smallLogo";
+    grid-template-areas: ". . . . . . smallLogo smallLogo smallLogo .";
 }
 
-/* Small logo attributes*/
+/* Display small logo and attributes on smaller devices*/
 .logoSmallContainer {
     grid-area: smallLogo;
-    margin-right: 10px;
+    margin-right: 100px;
     outline: none; }
 
 .logoSmall {
@@ -35,33 +38,40 @@ html {
     outline: none;
 }
 
-
-/* Large logo attributes*/
-.logoSmallContainer {
-    grid-area: smallLogo;
-    margin-right: 10px;
-    outline: none;
-}
-
-/*Hide large logo on smaller screens*/
+/*Hide large logo on smaller devices*/
 .largeLogoContainer {
     grid-area: largeLogo;
     background-size: contain;
     display: none; }
 
-/* Hide links smaller screens*/
+/* Hide links on smaller devices*/
 .linkContainer {
     display: none;
 }
 
-/* Start Query*/
+
+/* Start Queries*/
 @media screen and (min-width: 45rem) {
+
+    /* Hide small logo on smaller devices */
+    .logoSmall {
+        display: none; }
+
+    .logoSmallContainer {
+        display: none;
+    }
+
+    /* Grid container for larger devices*/
     .gridContainer {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: auto;
-        grid-template-areas: ". largeLogo largeLogo ." ". links links .";
+        grid-template-areas:
+                ". largeLogo largeLogo ."
+                ". links links .";
     }
+
+    /*Display links */
     .linkContainer {
         text-align: center;
         display: inline-block;
@@ -69,6 +79,7 @@ html {
         grid-area: links;
     }
 
+    /*Display large logo and attributes on larger devices */
     .largeLogoContainer {
         height: 120px;
         display: block;
