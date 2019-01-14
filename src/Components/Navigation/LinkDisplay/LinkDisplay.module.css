@@ -10,7 +10,7 @@
 /* Inline block for li items*/
 li {
     display: inline-block;
- outline: none;
+    outline: none;
 }
 
 /* Take away underline for a tags*/

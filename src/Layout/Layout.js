@@ -1,28 +1,28 @@
 import React from 'react';
-import style from './Layout.module.css';
+import styles from './Layout.module.css';
 import LinkDisplay from '../Components/Navigation/LinkDisplay/LinkDisplay';
 
 const layout = () => (
 
  <div>
      {/* Background image properties*/}
-    <div className={style.background}></div>
+    <div className={styles.background}></div>
 
      {/* Grid Navigation Container Start*/}
-    <div className={style.gridContainer}>
+    <div className={styles.gridContainer}>
 
         {/* Display small logo */}
-        <div className={style.logoSmallContainer}>
-            <div className={style.logoSmall}></div>
+        <div className={styles.logoSmallContainer}>
+            <div className={styles.logoSmall}></div>
         </div>
 
         {/* Display large logo */}
-        <div className={style.largeLogoContainer}>
-        <div className={style.logoLarge}></div>
+        <div className={styles.largeLogoContainer}>
+        <div className={styles.logoLarge}></div>
         </div>
 
         {/* Display Links */}
-     <div className={style.linkContainer}>
+     <div className={styles.linkContainer}>
       <LinkDisplay/>
     </div>
 

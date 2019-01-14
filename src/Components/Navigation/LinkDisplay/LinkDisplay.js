@@ -26,20 +26,21 @@ const linkDisplay = () => (
         <li>
             <Link to= "/visual"> <Visual/> </Link>
         </li>
-        <li>
+
+        {/*  <li>
             <Link to= "/words"> <Words/> </Link>
         </li>
+        */}
         <li>
             <Link to= "/info"> <Info/> </Link>
         </li>
 
-
     </div>
         <Route path="/audio" component={AudioContent} />
         <Route path="/visual" component={VisualContent} />
-        <Route path="/words" component={WordsContent} />
+        {/*<Route path="/words" component={WordsContent} />*/}
         <Route path="/info" component={InfoContent} />
     </div>
     </Router>
-)
+);
 export default linkDisplay;
