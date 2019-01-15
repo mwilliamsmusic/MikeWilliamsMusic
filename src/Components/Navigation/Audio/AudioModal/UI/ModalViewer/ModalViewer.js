@@ -37,7 +37,7 @@ class ModalViewer extends React.Component {
                 {/* sends showSkills value as props to ButtonController where button code resides
                 When Button is clicked, showModalHandler method will execute.
                 */}
-                <ButtonController showSkills={this.showModalHandler}/>
+                <ButtonController showAlbum={this.showModalHandler}/>
 
             </Fragment>
         </div>
