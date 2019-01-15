@@ -1,5 +1,8 @@
 import React from 'react';
+
+import albums from './Albums';
 import style from './Audio.module.css';
+
 
 const audio = () => (
     <div >
