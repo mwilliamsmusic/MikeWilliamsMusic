@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import SkillSummary from '../AlbumListing/AlbumListing';
+import AlbumListing from '../AlbumListing/AlbumListing';
 import Modal from '../Modal/Modal'
 import ButtonController from '../ButtonController/ButtonController';
 
@@ -31,7 +31,7 @@ class ModalViewer extends React.Component {
             <Fragment>
                 <Modal show={this.state.showModal} closeModal={this.closeModalHandler}>
                     {/* Pass skills from this.state objects*/}
-                    <SkillSummary skills={this.state.Ian}/>
+                    <AlbumListing tracks={this.state.Ian}/>
                 </Modal>
 
                 {/* sends showSkills value as props to ButtonController where button code resides

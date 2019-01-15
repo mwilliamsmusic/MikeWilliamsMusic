@@ -1,20 +1,20 @@
 import React, {Fragment} from 'react';
 const albumListing = (props) => {
 
-    {/* Accessing skills props passed in from modelViewer */}
-    const skillsForClass = Object.keys(props.skills)
-        .map(skillsKey =>{
+    {/* Accessing tracks props passed in from modelViewer */}
+    const trackListing = Object.keys(props.tracks)
+        .map(tracksKey =>{
             return (
-                <li key={skillsKey}>
-                <span style={{textTransform:'capitalize'}}>{skillsKey}</span>:{props.skills[skillsKey]}
+                <li key={tracksKey}>
+                <span style={{textTransform:'capitalize'}}>{tracksKey}</span>:{props.tracks[tracksKey]}
             </li>);
         });
     return(
     <Fragment>
-        <h3>Your skills</h3>
-    <p>All Dem Skills Though...</p>
+        <h3>Your tracks</h3>
+    <p>All Dem tracks Though...</p>
         <ul>
-            {skillsForClass}
+            {trackListing}
         </ul>
     </Fragment>
     );
