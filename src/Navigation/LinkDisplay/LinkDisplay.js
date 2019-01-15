@@ -2,17 +2,17 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import style from './LinkDisplay.module.css';
 
-import Audio from '../AudioHeaderLink/AudioHeaderLink';
-import AudioContent from '../../../AudioContent/AudioContent';
+import Audio from '../HeaderLink_Audio/HeaderLink_Audio';
+import AudioContent from '../../PageContent/AudioContent/AudioContent';
 
-import Visual from '../Visual/Visual';
-import VisualContent from '../Visual/VisualContent/VisualContent';
+import Visual from '../HeaderLink_Visual/HeaderLink_Visual';
+import VisualContent from '../../PageContent/VisualContent/VisualContent';
 
-import Words from '../Words/Words';
-import WordsContent from '../Words/WordsContent/WordsContent';
+import Words from '../HeaderLink_Words/HeaderLink_Words';
+import WordsContent from '../../PageContent/WordsContent/WordsContent';
 
-import Info from '../Info/Info';
-import InfoContent from '../../../InfoContent/InfoContent';
+import Info from '../HeaderLink_Info/HeaderLink_Info';
+import InfoContent from '../../PageContent/InfoContent/InfoContent';
 
 
 const linkDisplay = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Layout.module.css';
-import LinkDisplay from '../Components/Navigation/LinkDisplay/LinkDisplay';
+import LinkDisplay from '../Navigation/LinkDisplay/LinkDisplay';
 
 const layout = () => (
 
