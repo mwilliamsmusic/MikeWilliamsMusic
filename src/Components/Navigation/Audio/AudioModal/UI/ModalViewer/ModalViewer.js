@@ -31,13 +31,13 @@ class ModalViewer extends React.Component {
             <Fragment>
                 <Modal show={this.state.showModal} closeModal={this.closeModalHandler}>
                     {/* Pass skills from this.state objects*/}
-                    <AlbumListing tracks={this.state.Ian}/>
+                    <AlbumListing skills={this.state.Ian}/>
                 </Modal>
 
                 {/* sends showSkills value as props to ButtonController where button code resides
                 When Button is clicked, showModalHandler method will execute.
                 */}
-                <ButtonController showAlbum={this.showModalHandler}/>
+                <ButtonController showSkills={this.showModalHandler}/>
 
             </Fragment>
         </div>

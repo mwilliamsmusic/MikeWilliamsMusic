@@ -1,9 +1,11 @@
 import React from 'react';
-
+import ButtonController from '../Audio/AudioModal/UI/ButtonController/ButtonController';
+import ModalViewer from "./AudioModal/UI/ModalViewer/ModalViewer";
 function audioContent() {
     return (
         <div>
-            <h2>AUDIODIDODIDODI</h2>
+      <ModalViewer/>
+      blah
         </div>
     );
 }
